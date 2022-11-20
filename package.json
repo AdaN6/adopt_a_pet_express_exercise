@@ -1,0 +1,27 @@
+{
+  "name": "adopt_a_pet_express_exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdaN6/adopt_a_pet_express_exercise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdaN6/adopt_a_pet_express_exercise/issues"
+  },
+  "homepage": "https://github.com/AdaN6/adopt_a_pet_express_exercise#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
