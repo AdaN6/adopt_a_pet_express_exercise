@@ -9,7 +9,8 @@ router.get("/", (req, res) => {
 router
 .route("/:pet_type")
 .get((req,res) => {
-console.log("happy")
+    const {pet_type} = req.params;
+res.render("pet_type", { pet: `${pet_type}`})
 })
 
 
