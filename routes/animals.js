@@ -11,16 +11,17 @@ router
 .route("/:pet_type")
 .get((req, res) => {
   const { pet_type } = req.params;
-//   const html = `<ul>${animals[pet_type]
-//     .map((animal, index) => `<li>${animal.name}</li>`)
-//     .join("")}</ul>`;
+  const html = `<ul>${animals[pet_type]
+    .map((animal, index) => `<li>${animal.name}</li>`)
+    .join("")}</ul>`;
   
-  const html =  animals[pet_type].map((animal, index) => `<li>${animal.name}</li>`)
+//   const html =  animals[pet_type].map((animal, index) => `<li>${animal.name}</li>`)
 
-  res.render("pet_type", {
-    pet: `${pet_type.charAt(0).toUpperCase() + pet_type.slice(1)}`,
-    name: `${html}`,
-  });
+  res.send(html)
+//   res.render("pet_type", {
+//     pet: `${pet_type.charAt(0).toUpperCase() + pet_type.slice(1)}`,
+//     name: `${html}`,
+//   });
 })
 
 
