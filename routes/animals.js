@@ -10,7 +10,9 @@ router
 .route("/:pet_type")
 .get((req,res) => {
     const {pet_type} = req.params;
-res.render("pet_type", { pet: `${pet_type}`})
+res.render("pet_type", {
+  pet: `${pet_type.charAt(0).toUpperCase() + pet_type.slice(1)}`,
+});
 })
 
 
