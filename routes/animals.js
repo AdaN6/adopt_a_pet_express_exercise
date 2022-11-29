@@ -4,13 +4,19 @@ const animals = require("../src/helper")
 
 
 router.get("/", (req, res) => {
-    res.render("pets")
+  const allAnimal = `<ul>${Object.keys(animals).map((animal, index) => `<li>${animal.name}</li>`)
+    .join("")}</ul>`;
+
+    res.render(allAnimal)
+
 })
 
 router
 .route("/:pet_type")
 .get((req, res) => {
   const { pet_type } = req.params;
+  
+  
   const html = `<ul>${animals[pet_type]
     .map((animal, index) => `<li>${animal.name}</li>`)
     .join("")}</ul>`;
